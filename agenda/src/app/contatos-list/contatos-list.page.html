@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Contatos</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <ion-list>
+      <ion-item-sliding *ngFor="let contato of contatos">
+        <ion-item class="contato">
+          <ion-avatar item-left >  
+            <img src="{{contato.foto}}">
+          </ion-avatar> 
+          <h2>{{contato.nome}}</h2>
+        </ion-item>
+      </ion-item-sliding>
+    </ion-list>
+    <!-- <ion-fab bottom right> -->
+        <!-- <button ion-fab color="secondary" (click)="novoIntegrante()"><ion-icon name="add"></ion-icon></button> -->
+    <!-- </ion-fab> -->
+</ion-content>
